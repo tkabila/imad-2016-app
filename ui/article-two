@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>
+        ArticleOne|tkabila
+        </title>
+        <meta name = "viewport" content="width=device-width, initial-scale=1"/>
+        
+    </head>
+    <body>
+        <div>
+            <a href ="/">Home</a>
+            </div>
+            <hr/>
+            <h3>
+                Article One
+                </h3>
+                <div>
+                sep 10,2016
+                </div>
+                <p>
+                   This content is for Article - 2
+                </p>
+                </body>
+                </html>
