@@ -4,7 +4,7 @@ element.innerHTML = 'Super !!';
 var img = document.getElementById('madi');
 var marginLeft =0;
 function moveRight(){
- marginLeft = marginLEft+1;
+ marginLeft = marginLeft+1;
  img.style.marginLeft = marginLeft+'px';
 }
 img.onclick = function(){
