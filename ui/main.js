@@ -4,11 +4,11 @@ element.innerHTML = 'Super !!';
 var img = document.getElementById('madi');
 var marginLeft =0;
 function moveRight(){
- marginLeft = marginLEft+10;
+ marginLeft = marginLEft+1;
  img.style.marginLeft = marginLeft+'px';
 }
 img.onclick = function(){
     
-   var interval = setInterval(moveRight,100);
+   var interval = setInterval(moveRight,50);
     
 };
