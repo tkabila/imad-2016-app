@@ -31,8 +31,7 @@ var articles = {
                   </p>`
         
     },
-    
-     'article-three':{
+    'article-three':{
         title :`Article Three|tkabila`,
         heading :`Article Three`,
         date :`Sep 10,2016`,
@@ -43,13 +42,7 @@ var articles = {
                   </p>`
         
     }
-   
-  
-
-     
-};
-
-
+  };
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
