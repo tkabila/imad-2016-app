@@ -1,4 +1,4 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 //
 var buttom = document.getElementById(`counter`);
 var counter =0;
