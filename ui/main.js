@@ -3,7 +3,7 @@
 var button = document.getElementById('counter');
 
 button.onclick = function(){
-    var request = new XMLHTTPRequest();
+    var request = new XMLHttpRequest();
     span.innerHTML = counter.toString();
     request.onreadystatechange = function(){
      if(request.readyState===XMLHTTPRequest.Done){
@@ -15,6 +15,6 @@ button.onclick = function(){
      }    
         
     };
-    request.open('GET','http://tkabila.imad.hasura-app.io/counter',true);
+    request.open(`GET`,`http://tkabila.imad.hasura-app.io/counter`,true);
     request.send(null);
 };
