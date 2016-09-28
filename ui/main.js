@@ -4,7 +4,7 @@ var button = document.getElementById('counter');
 
 button.onclick = function(){
     var request = new XMLHttpRequest();
-    span.innerHTML = counter.toString();
+   
     request.onreadystatechange = function(){
      if(request.readyState===XMLHTTPRequest.Done){
          if(request.status === 200){
