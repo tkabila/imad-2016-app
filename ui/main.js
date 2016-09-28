@@ -1,11 +1,20 @@
 //console.log('Loaded!');
 //
 var button = document.getElementById('counter');
-var counter =0;
+
 button.onclick = function(){
-  //  var request = new XMLHTTPRequest();
-    counter =counter+1;
-    var span = document.getElementById('count');
+    var request = new XMLHTTPRequest();
     span.innerHTML = counter.toString();
-    
+    request.onreadystatechange = function(){
+     if(request.readystate===XMLHTTPRequest.Done){
+         if(request.status === 200){
+             var counter = request.responseText;
+             var span = document.getElementById('id');
+             span.innerHTML = counte.toString();
+         }
+     }    
+        
+    };
+    request.open('GET','http://tkabila.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
