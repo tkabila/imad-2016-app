@@ -12,7 +12,7 @@ li{
     float:left;
 }
 li a{
-    display:block;
+    display:inline-block;
     color:red;
     padding:16px;
     text-decoration:none;
