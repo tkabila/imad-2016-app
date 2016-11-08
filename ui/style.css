@@ -42,6 +42,7 @@ body {
 }
 
         .container{
+            margin-top:30px;
             max-width:800px;
             margin:0 auto;
             color:grey;
