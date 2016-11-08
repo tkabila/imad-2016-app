@@ -1,3 +1,23 @@
+     .ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#333;
+    position:fixed;/* Set navbar to fixed position*/
+    top:0;/*Position the navbar at the top*/
+    width:100%;/*Full width*/
+}
+li{
+    float:left;
+}
+li a{
+    display:block;
+    color:white;
+    padding:16px;
+    text-decoration:none;
+}
+        
 body {
     font-family: sans-serif;
     margin-top:60px; 
@@ -29,23 +49,4 @@ body {
             padding-left:20px;
             padding-right:20px;
         }
-        .ul{
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background-color:#333;
-    position:fixed;/* Set navbar to fixed position*/
-    top:0;/*Position the navbar at the top*/
-    width:100%;/*Full width*/
-}
-li{
-    float:left;
-}
-li a{
-    display:block;
-    color:white;
-    padding:16px;
-    text-decoration:none;
-}
-        
+   
