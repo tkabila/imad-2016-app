@@ -11,45 +11,7 @@ var config = {
   };  
 var app = express();
 app.use(morgan('combined'));
-var articles = {
-    'article-one':{
-        title :`Article One|tkabila`,
-        heading :`Article One`,
-        date :`Sep 5, 2016`,
-        content:`  <p>
-                              This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.
-                         </p>
-                         <p>
-                              This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.
-                           </p>
-                           <p>
-                              This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.This content is created for Article one.
-                              </p>`
-        
-    },
-    'article-two':{
-        title :`Article Two|tkabila`,
-        heading :`Article Two`,
-        date :`Sep 10,2016`,
-        content:`<p>
-        
-                     This content created for Article two
-        
-                  </p>`
-        
-    },
-    'article-three':{
-        title :`Article Three|tkabila`,
-        heading :`Article Three`,
-        date :`Sep 10,2016`,
-        content:`<p>
-        
-                     This content created for Article three
-        
-                  </p>`
-        
-    }
-  };
+
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
