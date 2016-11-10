@@ -46,3 +46,15 @@ body {
     margin-top :100px;
     
 }  
+.ul{
+    list-style:none;
+    display:inline;
+    font-weight:bold;
+    padding :20px;
+    
+}
+.a{
+    color :white;
+    text-decoration :none;
+    padding :10px;
+}
