@@ -46,14 +46,14 @@ body {
     margin-top :100px;
     
 }  
-.ul{
+#nav_menu ul li{
     list-style:none;
     display:inline;
     font-weight:bold;
     padding :20px;
     
 }
-.a{
+nav_menu a{
     color :white;
     text-decoration :none;
     padding :10px;
