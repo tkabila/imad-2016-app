@@ -33,10 +33,10 @@ body {
         }
 #nav{
     width :100%;
-    height :200px;
+    height :400px;
     background:url(http://www.4to40.com/wordpress/wp-content/uploads/2015/03/culture-tradition-of-india.jpg);
     background-size :cover;
-    margin-top:0;
+   /* margin-top:0;*/
 }
 #nav_menu{
     height:50px;
