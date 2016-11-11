@@ -40,18 +40,18 @@ body {
 }
 #nav_menu{
     height:100px;
-    width:400px;
+    width:500px;
     background :red;
     margin-left :auto;
     margin-right:auto;
-    margin-top:100;
+    margin-top:100px;
     
 }  
 #nav_menu ul li{
     list-style:none;
     display:inline;
     font-weight:bold;
-    padding :20px;
+    padding :15px;
     
 }
 nav_menu a{
