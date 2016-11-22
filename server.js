@@ -6,7 +6,7 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var config = {
-    user : 'tkabila',
+    user : 'tkabila', 
     database : 'tkabila',
     host : 'db.imad.hasura-app.io',
     port : '5432',
