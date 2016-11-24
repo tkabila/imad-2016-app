@@ -59,3 +59,17 @@ nav_menu a{
     text-decoration :none;
     padding :10px;
 }
+.comment{
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.commenter{
+    font-style: italic;
+    font-size: 0.8em;
+}
+#comment-form{
+ margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;   
+}
