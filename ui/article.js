@@ -1,3 +1,4 @@
+var currentArticleTitle = window.location.pathname.split('/')[2];
 function loadCommentForm(){
 var commentFormHtml = `
 <h4>Submit your valuable comment... </h4>
