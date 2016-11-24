@@ -30,3 +30,15 @@ submit.onclick = function(){
    submit.value = 'Submitting...';
 };
 }
+function loadLogin(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.Done){
+            if(request.status === 200){
+                loadCommentForm(this.response.Text);
+        }
+        }
+};
+request.open('GET','/check-login',true)
+request.send(null);
+}
