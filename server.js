@@ -53,6 +53,11 @@ var htmlTemplate =`
                     </div>
                     ${content}
                         </div>
+                        <hr/>
+                        <h4>Comments</h4>
+                        <div id = "comment-form">
+                      </div>
+                      <div id = "comments">
                       </div>
         </body>
 </html>
