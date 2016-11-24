@@ -42,3 +42,9 @@ function loadLogin(){
 request.open('GET','/check-login',true)
 request.send(null);
 }
+function escapeHTML(text){
+    var $text = document.createTextNode('text');
+    var $div = document.createElement('div');
+    $div.apprndChild($text);
+    return $div.innerHTML;
+    }
