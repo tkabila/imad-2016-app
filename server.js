@@ -59,7 +59,7 @@ var htmlTemplate =`
                       </div>
                       <div id = "comments">
                       </div>
-                      <script type = "text/javascript" src = "/ui/article.js"></style>
+                      <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
 </html>
 
