@@ -150,6 +150,16 @@ app.get(`/articles/:articleName`,function(req,res){
         }
     });
     });
+    app.get(`/get-comments/:articleName`,function(req,res){
+    pool.query('SELECT * FROM "user".username FROM article,comment,"user"WHERE aritcle.title = $1AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC',[req.params.articleName],function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            res.spend(JSON.stringify(result.rows));
+            }
+    });
+    });
 
 
 app.get('/ui/style.css', function (req, res) {
