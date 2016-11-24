@@ -5,3 +5,4 @@ var commentFormHtml = `
 <input type = "submit" id = "submit" value = "submit"/>
 `;
 }
+document.getElementById('comment-form').innerHTML = commentFormHtml;
