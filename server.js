@@ -53,11 +53,7 @@ var htmlTemplate =`
                     </div>
                     ${content}
                         </div>
-                       
-                        <hr/>
-                        <textarea id="title" type="text "rows="10" cols="100" onkeyup="Allow()" ></textarea>
-<form><input type="submit" value="POST COMMENT" onclick="insert()" /></form>
-</div>
+                      </div>
         </body>
 </html>
 
