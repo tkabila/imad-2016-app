@@ -133,20 +133,6 @@ app.get('/logout', function(req,res){
     res.send('Loggedout');
 });
 var pool = new Pool(config);
-app.get('/test-db', function(req,res){
-    pool.query(`SELECT * FROM test`, function(err,result){
-        if (err)
-        {
-            res.status(500).send(err.toString());
-        }
-        else{
-            res.send(JSON.stringify(result.rows));
-        }
-    });
-    
-});
-
- 
 app.get(`/articles/:articleName`,function(req,res){
     pool.query("SELECT * FROM article WHERE title = $1",[req.params.articleName],function(err,result){
         if(err){
