@@ -39,7 +39,7 @@ function loadLogin(){
         }
         }
 };
-request.open('GET','/check-login',true)
+request.open('GET','/check-login',true);
 request.send(null);
 }
 function escapeHTML(text){
@@ -48,3 +48,34 @@ function escapeHTML(text){
     $div.apprndChild($text);
     return $div.innerHTML;
     }
+    function loadComments(){
+      var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.Done){
+            var comments = document.getElementById('comments'); 
+            if(request.status === 200){
+                var content = ' ';
+                var commentsData = JSON.parse(this.responseText);
+                for(var i=0; i<commentsData.length; i++){
+                    var time = new Date(commentsData[i].timestamp);
+                    content +=`
+                    <div class = 'comment'>
+                    <p>$ {escapeHTML(commentData[i].comment)}</p>
+                    <div class = "commenters">
+                    ${commentData[i].username}-${time.tolocateTimeString()} on ${time.toLocalDataString()}
+                    </div>
+                    </div>
+                    `;
+                }
+                comments.innerHTML = content;
+            }   
+    else{
+        comments.innerHTML('Oops! Could not load comments!');
+    }
+    }
+    };
+    request.open('GET','/get-comments' +currentArticleTitle,true);
+    request.send(null);
+    }
+    loadLogin();
+    loadComments();
