@@ -202,8 +202,8 @@ app.get('/logout', function (req, res) {
             var articleData = result.rows[0];
             res.send(createTemplate(articleData));
         }
-        });
-    
+        }
+    });
     });
 
 app.get('/ui/main.js', function (req, res) {
