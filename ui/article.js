@@ -14,7 +14,7 @@ submit.onclick = function(){
     request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.Done){
             if(request.status === 200){
-                document.getElementById('comment-text').value=' ';
+                document.getElementById('comment-text').value='';
                 loadcomments();
             }
             else{
@@ -45,7 +45,7 @@ request.send(null);
 function escapeHTML(text){
     var $text = document.createTextNode('text');
     var $div = document.createElement('div');
-    $div.apprndChild($text);
+    $div.appendChild($text);
     return $div.innerHTML;
     }
     function loadComments(){
