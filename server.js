@@ -133,23 +133,7 @@ app.get('/logout', function(req,res){
     res.send('Loggedout');
 });
 var pool = new Pool(config);
-app.get(`/articles/:articleName`,function(req,res){
-    pool.query("SELECT * FROM article WHERE title = $1",[req.params.articleName],function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-            if(result.rows.length===0){
-                res.status(404).send('Article not found');
-            }
-        
-        else{
-            var articleData = result.rows[0];
-            res.send(createTemplate(articleData));
-        }
-        }
-    });
-    });
+
     app.get(`/get-comments/:articleName`,function(req,res){
     pool.query('SELECT * FROM "user".username FROM article,comment,"user"WHERE aritcle.title = $1AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC',[req.params.articleName],function(err,result){
         if(err){
@@ -181,13 +165,33 @@ app.get(`/articles/:articleName`,function(req,res){
                 res.status(200).send('Comment Inserted');
             }   
             });
-            
         }
-   }    
-  });
+         }  
+     });
+    }else{
+        res.status(403).send('Only logged in users can comment');
+    }
+    });
+    
+     app.get(`/articles/:articleName`,function(req,res){
+    pool.query("SELECT * FROM article WHERE title = $1",[req.params.articleName],function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            if(result.rows.length===0){
+                res.status(404).send('Article not found');
+            }
+        
+        else{
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+        }
+    });
+    });
 
-
-app.get('/ui/style.css', function (req, res) {
+/*app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
@@ -197,7 +201,7 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
+});    */
 
 
 
