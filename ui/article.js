@@ -23,7 +23,7 @@ submit.onclick = function(){
             submit.value = 'submit';
         }
     };
-   var comment = document.getElementById('comment-text').value;
+   var comment = document.getElementById('comment_text').value;
    request.open('POST','/submit-comment' + currentArticleTitle,true);
    request.setRequestHeader('Content-Type','application/json');
    request.send(JSON.stringify({comment: comment}));
@@ -43,7 +43,7 @@ request.open('GET','/check-login',true);
 request.send(null);
 }
 function escapeHTML(text){
-    var $text = document.createTextNode('text');
+    var $text = document.createTextNode(text);
     var $div = document.createElement('div');
     $div.appendChild($text);
     return $div.innerHTML;
@@ -54,15 +54,15 @@ function escapeHTML(text){
         if(request.readyState === XMLHttpRequest.Done){
             var comments = document.getElementById('comments'); 
             if(request.status === 200){
-                var content = ' ';
+                var content = '';
                 var commentsData = JSON.parse(this.responseText);
                 for(var i=0; i<commentsData.length; i++){
                     var time = new Date(commentsData[i].timestamp);
                     content +=`
-                    <div class = 'comment'>
-                    <p>$ {escapeHTML(commentData[i].comment)}</p>
-                    <div class = "commenters">
-                    ${commentData[i].username}-${time.tolocateTimeString()} on ${time.toLocalDataString()}
+                    <div class = "comment">
+                    <p>$ {escapeHTML(commentsData[i].comment)}</p>
+                    <div class = "commenter">
+                    ${commentsData[i].username}-${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                     </div>
                     </div>
                     `;
