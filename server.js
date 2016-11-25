@@ -213,9 +213,9 @@ app.get('/ui/article.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.js'));
 });
 
-app.get('/ui/fileName', function (req, res) {
+/*app.get('/ui/fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
-});    
+});  */  
 
 
 
