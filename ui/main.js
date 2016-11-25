@@ -18,9 +18,13 @@ function loadLoginForm(){
           submit.value = 'Success!';
           }
        else if(request.status === 403){
-           submit.value = 'Invalid credentials.Try again!!';
+           submit.value = 'Invalid credentials.Try again?';
           }
         else if(request.status === 500){
+           alert('Something went wrong on the server');
+           submit.value = 'Login';
+         } 
+         else {
            alert('Something went wrong on the server');
            submit.value = 'Login';
          }
@@ -60,7 +64,8 @@ function loadLoginForm(){
     request.setRequestHeader('Content-Type','application/json');             
     request.send(JSON.stringify({username:username,password:password}));
     register.value = 'Registering... ';
-      };
+    
+    };
 }
 function loadloggedInUser(username){
     var loginArea = document.getElementById('login_area');
@@ -73,13 +78,10 @@ function loadloggedInUser(username){
       var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-              var articles = document.getElementById('articles');
-              if (request.status === 200) {   
-                   if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
+             if (request.status === 200) {
+              loadLoggedInUser(this.responseText);
             } else {
                 loadLoginForm();
-            }
             }
         }
     };
@@ -87,28 +89,28 @@ function loadloggedInUser(username){
     request.open('GET', '/check-login', true);
     request.send(null);
 }
-    function loadAticles(){
+    function loadArticles(){
       var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
               var articles = document.getElementById('articles');
               if (request.status === 200) {   
                   var content = '<ul>';
-                  var articleData = JSON.parse(this.response.Text);
-                  for(var i = 0; i < articleData.length; i++){
-                      content +=`<li>
-                      <a href = "/articles/${articleData[i].title}">${articleData[i].heading}</a>}
-                      (${articleData[i].date.split('T')[0]})</li>`;
-                  }
-                  content += '<ul>';
-                  articles.innerHTML = content;
-              }else{
-                  articles.innerHTML('Oops! could not load all articles!');
-              }
-              }
-        
+                var articleData = JSON.parse(this.responseText);
+                for (var i=0; i< articleData.length; i++) {
+                    content += `<li>
+                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
+                    (${articleData[i].date.split('T')[0]})</li>`;
+                }
+                content += "</ul>";
+                articles.innerHTML = content;
+            } else {
+                articles.innerHTML('Oops! Could not load all articles!');
+            }
+        }
     };
-    request.open('GET','/get-articles',true);
+    
+    request.open('GET', '/get-articles', true);
     request.send(null);
     }
     loadLogin();
