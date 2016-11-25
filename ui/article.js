@@ -60,7 +60,7 @@ function escapeHTML(text){
                     var time = new Date(commentsData[i].timestamp);
                     content +=`
                     <div class = "comment">
-                    <p>$ {escapeHTML(commentsData[i].comment)}</p>
+                    <p> ${escapeHTML(commentsData[i].comment)}</p>
                     <div class = "commenter">
                     ${commentsData[i].username}-${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                     </div>
