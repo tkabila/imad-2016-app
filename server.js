@@ -122,17 +122,32 @@ app.post('/login', function(req,res){
 });
 app.get('/check-login',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
-        res.send('You are logged in:'+req.session.auth.userId.toString());
-    }
-    else{
-        res.send('You are not logged in');
-    }
+        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
+           if (err) { res.status(500).send(err.toString());
+           }    else {
+                    res.send(result.rows[0].username);    
+                }
+       });
+   }    else {
+            res.status(400).send('You are not logged in!');
+            
+        }
 });
-app.get('/logout', function(req,res){
-    delete req.session.auth;
-    res.send('Loggedout');
+app.get('/logout', function (req, res) {
+   delete req.session.auth;
+   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
-var pool = new Pool(config);
+   var pool = new Pool(config);
+     app.get('/get-articles', function (req, res) {
+   
+   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
 
     app.get(`/get-comments/:articleName`,function(req,res){
     pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
@@ -140,7 +155,7 @@ var pool = new Pool(config);
             res.status(500).send(err.toString());
         }
         else{
-            res.spend(JSON.stringify(result.rows));
+            res.send(JSON.stringify(result.rows));
             }
     });
     });
