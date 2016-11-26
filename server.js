@@ -58,6 +58,7 @@ var htmlTemplate =`
                         <div id = "comment_form">
                       </div>
                       <div id = "comments">
+                       <center>Comments Loading...</center>
                       </div>
                       <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
@@ -150,8 +151,8 @@ app.get('/logout', function (req, res) {
 });
 
 
-    app.get(`/get-comments/:articleName`,function(req,res){
-    pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
+    app.get('/get-comments/:articleName',function(req,res){
+    pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND                         article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName],              function (err, result) {
       if (err) {
             res.status(500).send(err.toString());
         }
