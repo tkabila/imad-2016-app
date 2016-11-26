@@ -27,9 +27,9 @@ function loadLoginForm(){
            alert('Something went wrong on the server');
            submit.value = 'Login';
          } 
-         else if(username === '' || password === ''){
+         else if(username == '' || password == ''){
             alert('Please enter your name and password');
-            return false;
+            return;
          }
          else {
            alert('Something went wrong on the server');
