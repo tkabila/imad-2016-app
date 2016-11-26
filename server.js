@@ -57,7 +57,7 @@ var htmlTemplate =`
                         <h4>Comments</h4>
                         <div id = "comment_form">
                       </div>
-                      <div id = "comment">
+                      <div id = "comments">
                       </div>
                       <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
@@ -167,7 +167,7 @@ app.get('/logout', function (req, res) {
             res.status(500).send(err.toString());
         }
         else{
-            if(result.rows.length===0){
+            if(result.rows.length === 0){
                 res.status(400).send('Article not found');
             }
         
