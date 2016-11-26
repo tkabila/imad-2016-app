@@ -55,7 +55,7 @@ var htmlTemplate =`
                         </div>
                         <hr/>
                         <h4>Comments</h4>
-                        <div id = "comment-form">
+                        <div id = "comment_form">
                       </div>
                       <div id = "comments">
                       </div>
