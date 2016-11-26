@@ -71,5 +71,6 @@ nav_menu a{
 #comment_form{
  margin-left: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;   
+    border-bottom: 1px solid #ccc; 
+    align-content: center;
 }
