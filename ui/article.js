@@ -20,11 +20,11 @@ submit.onclick = function(){
             else{
                 alert('Error! Could not submit comment');
             }
-            submit.value = 'submit';
+            submit.value = 'Submit';
         }
     };
    var comment = document.getElementById('comment_text').value;
-   request.open('POST','/submit-comment' + currentArticleTitle,true);
+   request.open('POST','/submit-comment/' + currentArticleTitle, true);
    request.setRequestHeader('Content-Type','application/json');
    request.send(JSON.stringify({comment: comment}));
    submit.value = 'Submitting...';
@@ -35,7 +35,7 @@ function loadLogin(){
     request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.Done){
             if(request.status === 200){
-                loadCommentForm(this.response.Text);
+                loadCommentForm(this.responseText);
         }
         }
 };
