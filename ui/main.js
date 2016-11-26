@@ -28,7 +28,8 @@ function loadLoginForm(){
            submit.value = 'Login';
          } 
          else if(username === '' || password === ''){
-            alert('Please enter your name and password'); 
+            alert('Please enter your name and password');
+            return;
          }
          else {
            alert('Something went wrong on the server');
