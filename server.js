@@ -39,9 +39,7 @@ var htmlTemplate =`
     </head>
     <body>
         <div class="container">
-            
-            
-        <div>
+             <div>
             <a href ="/">Home</a>
             </div>
             <hr/>
