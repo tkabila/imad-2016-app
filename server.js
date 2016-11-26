@@ -57,7 +57,7 @@ var htmlTemplate =`
                         <h4>Comments</h4>
                         <div id = "comment_form">
                       </div>
-                      <div id = "comments">
+                      <div id = "comment">
                       </div>
                       <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
