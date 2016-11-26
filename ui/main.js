@@ -29,7 +29,7 @@ function loadLoginForm(){
          } 
          else if(username === '' || password === ''){
             alert('Please enter your name and password');
-            return;
+            return false;
          }
          else {
            alert('Something went wrong on the server');
