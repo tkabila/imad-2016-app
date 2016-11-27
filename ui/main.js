@@ -1,12 +1,26 @@
 function loadLoginForm(){
     var loginHtml = `
     <h3>Login/Register to unlock awesome features</h3>
+    <form name = "registerform" method="POST" onsubmit="return(regvalidate())"> 
     <input type = "text" id = "username" placeholder = "username"/>
     <br/><br/>
     <input type = "password" id = "password" placeholder = "password"/>
     <br/><br/>
     <input type = "submit" id = "login_btn" value = "Login"/>
     <input type = "submit" id = "register_btn" value = "Register"/>
+    <font color='red'> <DIV id="nonempty"> </DIV> </font> <input type = "submit" value="Register Now" /> 
+    <script>
+      function regvalidate()
+
+{
+if((document.username.value=="")&&(document.password.value==""))
+ {
+  document.getElementById('nonempty').innerHTML = "Username or Password should not be empty";
+  registerform.username.focus();
+  return(false);
+ }
+
+    </script>
     `;
     document.getElementById('login_area').innerHTML = loginHtml;
  var submit = document.getElementById('login_btn');
