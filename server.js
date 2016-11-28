@@ -37,9 +37,7 @@ var htmlTemplate =`
          <link href="/ui/style.css" rel="stylesheet" />
     
     </head>
-    <body>
-    
-              <div id="nav">
+        <div id="nav">
         <div id ="nav_menu">    
          <ul>
               <li><a href = "/">Home</a></li> 
