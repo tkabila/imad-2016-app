@@ -69,12 +69,9 @@ nav_menu a{
     font-style: italic;
     font-size: 0.8em;
 }
-.comment_text{
-  
-	border: 3px solid #cccccc;
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
-	background-image: url(bg.gif);
-	background-position: bottom right;
-	background-repeat: no-repeat;
+textarea{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
