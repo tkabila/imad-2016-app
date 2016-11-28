@@ -38,20 +38,9 @@ var htmlTemplate =`
     
     </head>
     <body>
-        <div id="nav">
-        <div id ="nav_menu">    
-         <ul>
-              <li><a href = "/">Home</a></li> 
-              <li><a href = "https://docs.google.com/document/d/1dpoCPErEUPkf0zzJSQPEXfNRc3pkh0dGCz15HQ_KOyQ/edit?usp=sharing">Profile   </a></li>
-             
-       </ul>
-       </div>
-       </div>
-      
-    
         <div class="container">
              
-          <!--  <a href ="/">Home</a>  -->
+           <a href ="/">Home</a>  
             </div>
             <hr/>
             <h3>
