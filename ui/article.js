@@ -49,6 +49,7 @@ function loadLogin () {
     request.send(null);
 }
 
+
 function escapeHTML (text)
 {
     var $text = document.createTextNode(text);
