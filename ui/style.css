@@ -70,8 +70,8 @@ nav_menu a{
     font-size: 0.8em;
 }
 #comment_form{
-    margin-left: 10px;
+    margin: 0 auto;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc; 
-    align-content: center;
+   
 }
