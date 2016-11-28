@@ -37,6 +37,7 @@ var htmlTemplate =`
          <link href="/ui/style.css" rel="stylesheet" />
     
     </head>
+    <body>
         <div id="nav">
         <div id ="nav_menu">    
          <ul>
@@ -46,12 +47,11 @@ var htmlTemplate =`
        </ul>
        </div>
        </div>
-       </body>
-        <body>
+      
     
         <div class="container">
              
-            <a href ="/">Home</a>
+          <!--  <a href ="/">Home</a>  -->
             </div>
             <hr/>
             <h3>
