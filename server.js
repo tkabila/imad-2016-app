@@ -49,12 +49,13 @@ var htmlTemplate =`
        </div>
         <div class="container">
           <div>   
-           <a href ="/">Home</a>  
-            </div>
+       <!---    <a href ="/">Home</a>  
+       </div>   --->
             <hr/>
             <h3>
                 ${heading}
                 </h3>
+                </div>
                 <div>
                     ${date.toDateString()}
                     </div>
