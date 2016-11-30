@@ -7,7 +7,7 @@ function loadCommentForm () {
         <br/>
         <input type="submit" id="submit" value="Submit" />
         <br/>
-        <div id="sidemenu"> Hello...</div>
+        
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
