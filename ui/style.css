@@ -45,9 +45,10 @@ body {
     background : yellow;
     margin-left :auto;
     margin-right:auto;
-    
-    
-}  
+}
+#div{
+    float: left;
+}
 #nav_menu ul li{
     list-style:none;
     display:inline;
