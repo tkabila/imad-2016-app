@@ -27,7 +27,7 @@ function createTemplate(data){
     var heading = data.heading;
     var content = data.content;
 
-var htmlTemplate =`
+var htmlTemplate =`0
 <html>
 <head>
     <title>
@@ -68,7 +68,7 @@ var htmlTemplate =`
                       <div id = "comments">
                        <center>Comments Loading...</center>
                       </div>
-                      
+                      <div id="sidemenu"> Hello...</div>
                       <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
 </html>
