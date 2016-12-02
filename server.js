@@ -55,10 +55,10 @@ var htmlTemplate =`
             <h3>
                 ${heading}
                 </h3>
-                </div>
                 <div>
                     ${date.toDateString()}
                     </div>
+                    <div>
                     ${content}
                         </div>
                         <hr/>
@@ -67,6 +67,7 @@ var htmlTemplate =`
                       </div>
                       <div id = "comments">
                        <center>Comments Loading...</center>
+                      </div>
                       </div>
                       <div id="sidemenu"> Hello...</div>
                       <script type = "text/javascript" src = "/ui/article.js"></script>
