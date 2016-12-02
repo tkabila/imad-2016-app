@@ -54,6 +54,8 @@ var htmlTemplate =`
         <br/><br/>
         <li> <a href = "/articles:article-three">Cloud Computing</a> </li>
         </div>
+        <div id="newsfeed">hello...
+       </div>
         <div class="container">
           <div>   
        <!---    <a href ="/">Home</a>  --->
