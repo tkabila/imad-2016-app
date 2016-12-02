@@ -48,7 +48,9 @@ var htmlTemplate =`
        </div>
        </div>
         <div id="sidemenu"> Hello...
-         
+         <a href = "/articles:article-one">The Queen of Sciences</a>
+         <a href = "/articles:article-two">Smart Villages</a>
+         <a href = "/articles:article-three">Cloud Computing</a>
         </div>
         <div class="container">
           <div>   
