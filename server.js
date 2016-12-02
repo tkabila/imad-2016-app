@@ -47,9 +47,11 @@ var htmlTemplate =`
        </ul>
        </div>
        </div>
-        <div id="sidemenu"> Hello...
+        <div id="sidemenu"> 
         <li> <a href = "/articles:article-one">The Queen of Sciences</a> </li>
+        <br/><br/>
         <li> <a href = "/articles:article-two">Smart Villages</a> </li>
+        <br/><br/>
         <li> <a href = "/articles:article-three">Cloud Computing</a> </li>
         </div>
         <div class="container">
