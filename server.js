@@ -48,8 +48,7 @@ var htmlTemplate =`
        </div>
        </div>
         <div id="sidemenu"> Hello...
-         <li><a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li> 
+         
         </div>
         <div class="container">
           <div>   
