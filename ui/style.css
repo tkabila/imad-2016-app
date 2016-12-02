@@ -45,13 +45,18 @@ body {
     background : yellow;
     margin-left :auto;
     margin-right:auto;
-    padding-top: 10px;
+   
 }
 #sidemenu{
     float: left;
      list-style:none;
      margin-top: 6cm;
      margin-left: 20px;
+}
+#newsfeed{
+    float: right;
+     margin-top: 6cm;
+     margin-right: 20px;
 }
 #nav_menu ul li{
     list-style:none;
