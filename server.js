@@ -47,6 +47,7 @@ var htmlTemplate =`
        </ul>
        </div>
        </div>
+        <div id="sidemenu"> Hello...</div>
         <div class="container">
           <div>   
        <!---    <a href ="/">Home</a>  --->
@@ -69,7 +70,7 @@ var htmlTemplate =`
                        <center>Comments Loading...</center>
                       </div>
                       </div>
-                      <div id="sidemenu"> Hello...</div>
+                     
                       <script type = "text/javascript" src = "/ui/article.js"></script>
         </body>
 </html>
