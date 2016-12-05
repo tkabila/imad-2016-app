@@ -48,7 +48,7 @@ var htmlTemplate =`
        </div>
        </div>
         <div id="sidemenu"> 
-        <h3>hello</h3>
+       
         <li> <a href = "http://tkabila.imad.hasura-app.io/articles/article-one">The Queen of Sciences</a> </li>
         <br/><br/>
         <li> <a href = "http://tkabila.imad.hasura-app.io/articles/article-two">Smart Villages</a> </li>
