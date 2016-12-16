@@ -52,7 +52,7 @@ var htmlTemplate =`
         <br/><br/>
         <li> <a href = "http://tkabila.imad.hasura-app.io/articles/article-two">Smart Villages</a> </li>
         <br/><br/>
-        <li> <a href = "http://tkabila.imad.hasura-app.io/articles/article-three">Cloud Computing</a> </li>
+        <li> <a href = "/ui/articles/article-three">Cloud Computing</a> </li>
         <br/><br/><br/>
        <li> <a href= "http://www.imad.tech/">CLICK HERE</a>to join the IMAD course</li>
         </div>
